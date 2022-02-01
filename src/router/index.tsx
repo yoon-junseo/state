@@ -2,7 +2,9 @@ import React from 'react';
 import loadable from '@loadable/component';
 import { Route, Switch } from 'react-router-dom';
 
+import ContextProvider from '@/context';
 import TodoProvider from '@/context/todo';
+import SampleProvider from '@/context/sample';
 
 const MainPage = loadable(() => import('@/pages/MainPage'));
 const SamplePage = loadable(() => import('@/pages/SamplePage'));
@@ -12,11 +14,11 @@ const Router = () => {
   return (
     <>
       <Switch>
-        <TodoProvider>
+        <ContextProvider contexts={[TodoProvider, SampleProvider]}>
           <Route path="/" component={MainPage} exact />
           <Route path="/sample" component={SamplePage} exact />
           <Route path="/todo" component={TodoPage} exact />
-        </TodoProvider>
+        </ContextProvider>
       </Switch>
     </>
   );

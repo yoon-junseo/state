@@ -1,4 +1,4 @@
-import React, { useRef, useReducer, createContext } from 'react';
+import React, { useReducer, createContext } from 'react';
 import { State, ToDoDispatch } from './types';
 import todoReducer from './reducer';
 
