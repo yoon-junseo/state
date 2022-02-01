@@ -5,7 +5,7 @@ const { EnvironmentPlugin } = require('webpack');
 require('dotenv/config');
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: './src/index.jsx',
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
