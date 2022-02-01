@@ -59,7 +59,11 @@ const App = () => {
       // );
 
       // 3단계, 첫 번째 인자로 함수 전달 => 업데이트 함수 반환
-      setData(produce((draft) => draft.array.push(info)));
+      setData(
+        produce((draft) => {
+          draft.array.push(info);
+        }),
+      );
 
       setForm({
         name: '',
@@ -90,7 +94,11 @@ const App = () => {
       // );
 
       // 3단계, 첫 번째 인자로 함수 전달 => 업데이트 함수 반환
-      setData(produce((draft) => draft.array.splice(draft.array.findIndex((info) => info.id === id))));
+      setData(
+        produce((draft) => {
+          draft.array.splice(draft.array.findIndex((info) => info.id === id));
+        }),
+      );
     },
     [data],
   );
