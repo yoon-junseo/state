@@ -1,6 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 
-import useTodos from '@/hooks/useTodos';
 import useAddTodo from '@/hooks/useAddTodo';
 
 const TodoInsert = () => {
