@@ -1,7 +1,9 @@
 import React from 'react';
 
+import TodoTemplate from '@/components/TodoTemplate';
+
 const App = () => {
-  return <div>Junseo's project setting</div>;
+  return <TodoTemplate />;
 };
 
 export default App;
