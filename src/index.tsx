@@ -1,6 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { RecoilRoot } from 'recoil';
 
 import App from './components/App';
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+import './index.css';
+
+ReactDOM.render(
+  <RecoilRoot>
+    <App />
+  </RecoilRoot>,
+  document.querySelector('#root'),
+);
